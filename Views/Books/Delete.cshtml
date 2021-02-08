@@ -1,0 +1,67 @@
+﻿@model LiberaryBK.Models.Books
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+@section nav
+{
+    <li class="nav-item mx-0 mx-lg-1">
+        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" asp-controller="Home" asp-action="Index">Home</a>
+    </li>
+    <li class="nav-item mx-0 mx-lg-1">
+        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" asp-action="Index">Books</a>
+    </li>
+
+}
+<div class="container-fluid" style="margin-top:120px">
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BookName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BookName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BookPdf)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BookPdf)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BookCover)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BookCover)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Userr)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Userr.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeF1Navigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TypeF1Navigation.TypeName)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="BookId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> 
+    </form>
+</div>

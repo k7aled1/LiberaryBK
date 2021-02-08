@@ -1,0 +1,28 @@
+﻿
+@model Comments
+<!--<form>
+    <input placeholder="Write a comment" type="text">
+    <button><i class="fa fa-camera"></i></button>
+</form>-->
+<!--<form>
+    <div class="form-group row">
+
+        <label asp-for="ComntText" class="control-label"></label>
+        <input asp-for="ComntText" class="form-control" />
+    </div>
+</form>-->
+<div class="container">
+    <table>
+        <tr>
+            <td>
+                <form method="post">
+                    <input asp-for="ComntId" hidden>
+                    <label asp-for="ComntText" class="control-label"></label>
+                    <input asp-for="ComntText" class="form-control" />
+                    <input asp-for="BookF3" class="form-control" />
+                    <input asp-for="UserF4" class="form-control" />
+                </form>
+            </td>
+        </tr>
+    </table>
+</div>

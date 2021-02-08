@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Comments>
+@{
+    Layout = null;
+}
+
+    <div class="container">
+        <h4><b>The Discussion</b></h4>
+        <hr style="width:150px;color:red" class="row">
+        <table>
+            @foreach (Comments item in Model)
+            {
+                <tr>
+                    <td><input style="width:auto" class="form-control" type="text" disabled value="@item.ComntText"></td>
+                </tr>
+            }
+
+        </table>
+        <!-- made a new viewcomponent for adding comments ???????????????-->
+        @*@await Component.InvokeAsync("AddComnt",new { Bid=x , Uid="aa4e1481-b20d-41f5-b778-e5cc8b6fe20f" });*@
+    </div>
+
+<!--/ cardbox-base -->
+<!--<div class="cardbox-comments">
+    <span class="comment-avatar float-left">
+        <a href=""><img class="rounded-circle" src=""></a>
+    </span>
+    <div class="search">
+        <input placeholder="Write a comment" type="text">
+        <button><i class="fa fa-camera"></i></button>
+    </div>
+</div>-->
